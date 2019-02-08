@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_background">
+
+            <TextView
+                android:id="@+id/user_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:text="@string/user_data"
+                android:layout_marginEnd="@dimen/margin_general"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+            <ImageView
+                android:id="@+id/shape"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/shape_height"
+                android:contentDescription="@string/shape_content"
+                android:src="@drawable/rectangle_shape"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_data"
+                app:layout_constraintVertical_bias="0.1" />
+
+
+            <ImageView
+                android:id="@+id/image_wine"
+                android:layout_width="90dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="@dimen/margin_general"
+                android:contentDescription="@string/wine_image_content_description"
+                android:src="@drawable/rectangle_shape"
+                app:layout_constraintBottom_toBottomOf="@id/shape"
+                app:layout_constraintLeft_toLeftOf="@id/shape"
+                app:layout_constraintRight_toLeftOf="@id/tv_wine_varietal"
+                app:layout_constraintTop_toTopOf="@id/shape"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/tv_wine_varietal"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:gravity="center_horizontal"
+                android:text="@string/varietal_item"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/subtitle_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/shape"
+                app:layout_constraintLeft_toRightOf="@+id/image_wine"
+                app:layout_constraintRight_toRightOf="@+id/shape"
+                app:layout_constraintTop_toTopOf="@+id/shape"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_wine_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_general"
+                android:textSize="@dimen/details_text_size"
+                android:textStyle="bold"
+                tools:text="@string/wine_name" />
+
+            <TextView
+                android:id="@+id/tv_wine_region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_general"
+                android:layout_marginStart="@dimen/margin_general"
+                android:textSize="@dimen/details_text_size"
+                tools:text="@string/wine_region" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_wine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_general"
+                    android:text="@string/vintage_label"
+                    android:textSize="@dimen/details_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_wine_vintage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_general"
+                    android:layout_marginStart="@dimen/margin_general"
+                    android:textSize="@dimen/details_text_size"
+                    tools:text="@string/wine_vintage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_general"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_label_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rank_label"
+                    android:textSize="@dimen/details_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_wine_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_general"
+                    android:textSize="@dimen/details_text_size"
+                    tools:text="@string/wine_rannk" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_general"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/price_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_label"
+                    android:textSize="@dimen/details_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_wine_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_general"
+                    android:layout_marginStart="@dimen/margin_general"
+                    android:textSize="@dimen/details_text_size"
+                    tools:text="@string/wine_price" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_qty_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="@dimen/margin_general"
+                    android:layout_marginStart="@dimen/margin_general"
+                    android:padding="15dp"
+                    android:text="@string/qty_select"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/details_text_size"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/decrease_qty"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/minus"
+                    android:textSize="@dimen/details_text_size"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/tv_qty_number"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_general"
+                    android:text="@string/default_qty_string"
+                    android:textSize="@dimen/details_text_size" />
+
+                <Button
+                    android:id="@+id/increase_qty"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/plus"
+                    android:textSize="@dimen/details_text_size"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/display_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_general"
+                android:layout_marginTop="@dimen/margin_general"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/total_price_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_label"
+                    android:textSize="@dimen/details_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_total_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/details_text_size"
+                    tools:text="@string/wine_price"
+                    android:layout_marginStart="@dimen/margin_general" />
+            </LinearLayout>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_general"
+                android:visibility="visible"/>
+
+            <Button
+                android:id="@+id/sign_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrderButton"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_general"
+                android:layout_marginBottom="@dimen/margin_general"
+                android:text="@string/sign_out_button"
+                android:elevation="@dimen/elevation_button"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <Button
+                android:id="@+id/button_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin_general"
+                android:background="@color/colorOrderButton"
+                android:elevation="@dimen/elevation_button"
+                android:text="@string/order_button"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/gradient_background"
+        android:layout_margin="@dimen/margin_general"
+        android:orientation="horizontal">
+
+        <!-- <div>Icons made by
+        <a href="https://www.flaticon.com/authors/srip"
+        title="srip">srip</a> from <a href="https://www.flaticon.com/"
+        title="Flaticon">www.flaticon.com</a> is licensed by
+        <a href="http://creativecommons.org/licenses/by/3.0/"
+        title="Creative Commons BY 3.0" target="_blank">
+        CC 3.0 BY</a></div>-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_padding"
+            android:background="@color/colorOrderButton"
+            android:src="@drawable/heart" />
+
+        <!--<div>Icons made by
+        <a href="https://www.flaticon.com/authors/smashicons"
+        title="Smashicons">Smashicons</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">
+        www.flaticon.com</a> is licensed by
+        <a href="http://creativecommons.org/licenses/by/3.0/"
+        title="Creative Commons BY 3.0" target="_blank">
+        CC 3.0 BY</a></div>-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/fab_padding"
+            android:layout_marginStart="@dimen/fab_padding"
+            android:background="@color/colorOrderButton"
+            android:src="@drawable/share" />
+    </LinearLayout>
+</LinearLayout>

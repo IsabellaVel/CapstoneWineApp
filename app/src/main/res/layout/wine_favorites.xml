@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    This layout defines the main activity screen and displays a listtaskEntriesasks (if they exist),
+    and a floating action button that launches another activity.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/favs_title"
+            android:text="@string/my_favs_title"
+            android:textStyle="bold"
+            android:textSize="@dimen/subtitle_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_general"/>
+
+        <!-- RecyclerView that is responsible for holding a listwine data -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewWines"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layout_marginStart="@dimen/margin_general" />
+
+
+    </LinearLayout>
+
+</ScrollView>
