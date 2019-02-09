@@ -58,7 +58,7 @@ public class WineListFragment extends Fragment {
     private List<Wine> wineList;
     private final String mUrl = "";
     private Unbinder unbinder;
-    public static final String WINE_JSON_URI = "http://api.snooth.com/wines/?";
+    public static final String WINE_JSON_URI = BuildConfig.API_URI;
     public static final String apiKey = BuildConfig.API_KEY;
     public final static String API_KEY_QUERY = "akey";
     public final static String API_QUERY = "q";
